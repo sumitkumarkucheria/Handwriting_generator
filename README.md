@@ -14,13 +14,9 @@ A font renders every instance of the same letter identically. This renders each 
 
 ## How it works
 
-
 assignment_structured.json
-        │
-        ▼
-┌────────────────────────────┐
-│ handwritten_pdf_generator  │
-│                            │
+ handwritten_pdf_generator  
+                            
 │  1. classify each char     │  (ascender / descender / x-height / symbol)
 │  2. look up its SVG glyph  │  (alpha3/ = text, code_alpha/ = code)
 │  3. trim + scale + tint    │  (per-char pen-pressure opacity, occasional blur)
@@ -28,11 +24,8 @@ assignment_structured.json
 │  5. render tables as a     │  (hand-drawn ruled grid)
 │     hand-drawn grid        │
 │  6. paginate + overlay     │  (paper texture, tilt, vignette)
-└────────────────────────────┘
-        │
-        ▼
-handwritten_assignment.pdf
 
+handwritten_assignment.pdf
 
 Glyphs are cached in memory per (path, target_height) so repeated characters at the same size are only rasterized from SVG once per run.
 
