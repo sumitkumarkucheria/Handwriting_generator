@@ -18,12 +18,17 @@ assignment_structured.json
  handwritten_pdf_generator  
                             
 │  1. classify each char     │  (ascender / descender / x-height / symbol)
+
 │  2. look up its SVG glyph  │  (alpha3/ = text, code_alpha/ = code)
+
 │  3. trim + scale + tint    │  (per-char pen-pressure opacity, occasional blur)
+
 │  4. lay out along a line   │  (jittered baseline, char/word spacing)
-│  5. render tables as a     │  (hand-drawn ruled grid)
-│     hand-drawn grid        │
+
+│  5. render tables as a hand-drawn grid    │  (hand-drawn ruled grid)
+
 │  6. paginate + overlay     │  (paper texture, tilt, vignette)
+
 
 handwritten_assignment.pdf
 
